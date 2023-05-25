@@ -5,6 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import { BiSearch } from 'react-icons/bi';
 import styled from '@emotion/styled';
 
+
 export const SearchInput = () => {
 
     return (
@@ -25,14 +26,14 @@ export const SearchInput = () => {
 }
 
 const StyledFormControl = styled(FormControl)(() => ({
-    marginTop: '20px',
-    backgroundColor: 'white',
-    border: '0px'
+  marginTop: '20px',
+  backgroundColor: 'white',
+  border: '0px' ,
 }));
 
 const StyledInputAdornment = styled(InputAdornment)(() => ({
-    svg: {
-        color: '#2A8CFF',
-        transform: 'scale(1.2)'
-    }
+  svg: {
+    color: '#2A8CFF',
+    transform: 'scale(1.2)'
+  }
 }));

@@ -1,14 +1,11 @@
 import { styled } from '@mui/system';
 import { Box } from '@mui/material';
-import Button from '@mui/material/Button';
 import { SHearder } from 'components/header/shearder';
-import { SFooter } from 'components/footer/sfooter';
 import { SearchInput } from 'components/inputs/search-input';
 import { VideoComp } from 'components/video-comp/videoComp';
-
-import { BsArrowRightShort } from 'react-icons/bs';
-
+import { BsArrowRightShort, BsSearch } from 'react-icons/bs';
 import { IMAGES } from 'constants/images';
+
 
 
 interface VideoComp_props {
@@ -64,22 +61,53 @@ const Home = () => {
       <SHearder />
       <SearchInput></SearchInput>
 
-      {/* {
+      {
         VideoDatas.map((item: VideoComp_props, index: any) => (
           <VideoComp {...item} key={index} />
         ))
-      } */}
+      }
+      <NextButton>{'Next'}<BsArrowRightShort></BsArrowRightShort></NextButton>
 
-      <Button variant="contained">{`Next ->`}</Button>
-      <SFooter />
+      <PageNavigation>
+        <BsSearch></BsSearch>
+        Search {} on Google
+      </PageNavigation>
     </Wrapper>
   );
 };
 
 export default Home;
 
-const Wrapper = styled(Box)(() => ({
+const Wrapper = styled(Box)({
   width: '100%',
   height: '100%',
-}));
+});
+
+const NextButton = styled('button')({
+  width: '100%',
+  backgroundColor: 'white',
+  border: 'none',
+  outline: 'none',
+  padding: '15px',
+  fontFamily: 'Barlow-Bold',
+  borderRadius: '6px',
+  color: '#2B2F39',
+  fontSize: '14px',
+  lineHeight: '16px',
+
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '5px',
+  svg: {
+    transform: 'scale(1.5)'
+  }
+})
+
+const PageNavigation = styled('div')({
+  background: '#FFFFFF',
+  borderRadius: '33px',
+  padding: '10px 16px',
+  gap: '10px'
+})
 
